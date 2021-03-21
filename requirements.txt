@@ -3,6 +3,8 @@
 jupyter==1.*
 #jupyterlab
 
+numpy==1.*
+matplotlib==3.*
 tensorflow==2.4.*
 tensorflow_datasets==4.*
 
