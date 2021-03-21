@@ -1,0 +1,6 @@
+Pillow
+
+# linters
+autopep8
+pydocstyle
+flake8
