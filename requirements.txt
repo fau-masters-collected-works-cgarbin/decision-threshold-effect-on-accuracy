@@ -1,12 +1,12 @@
 # This file uses specific versions to make the experiments reproducible
-
 jupyter==1.*
 jupyterlab==3.*
 
 numpy==1.*
-matplotlib==3.*
 tensorflow==2.4.*
 tensorflow_datasets==4.*
+
+matplotlib==3.*
 
 # linters
 autopep8
