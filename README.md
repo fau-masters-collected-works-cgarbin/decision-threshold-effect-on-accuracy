@@ -132,3 +132,14 @@ was measured and not just accept published numbers_.
 
 _"We achieved 99.9% accuracy on [some task here]"_ means nothing if it's not accompanied by a
 detailed description of what a "correct prediction" is for the model.
+
+## Running the example
+
+If you want to try the example on your own:
+
+1. Clone this repository
+1. cd &lt;folder for the cloned repository&gt;
+1. Create a [Python environment](https://docs.python.org/3/tutorial/venv.html): `python3 -m venv env`
+1. Activate the environment: `source env/bin/activate` (Mac and Linux), or `env\Scripts\activate.bat` (Windows)
+1. Install dependencies (only once): `pip install -r requirements.txt`
+1. Run the notebook: `jupyter lab`
