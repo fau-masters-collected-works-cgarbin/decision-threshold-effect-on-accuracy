@@ -24,7 +24,7 @@ accuracy = ----------------------------------
 ```
 
 To illustrate the discussion, we will use an image classification model (the code is in this
-[Jupyter playbook](./softmax-thresholds.ipynb)).
+[Jupyter notebook](./softmax-thresholds.ipynb)).
 
 (_Simplification disclaimer: there are other types of problems, e.g. regression, and other types of
 models -- we are making simplifications to expose the main concept._)
@@ -44,13 +44,13 @@ This is an actual digit from MNIST. The model correctly classifies it as the dig
 
 &nbsp;&nbsp;&nbsp;&nbsp;![Classification example](./pics/digit-classification-example.png)
 
-A neural network has several layers to extract ("learn") features from the images. The very last
-layer is the one that classifies the image. In this case, we are classifying ten classes (ten
+A neural network has several hidden layers to extract ("learn") features from the images. The very
+last layer is the one that classifies the image. In this case, we are classifying ten classes (ten
 digits), therefore the last layer has ten neurons, one for each digit.
 
 &nbsp;&nbsp;&nbsp;&nbsp;![Classification layer](./pics/classification-layer.png)
 
-Because we want to know what digit it is, we use a [softmax activation](https://www.tensorflow.org/api_docs/python/tf/keras/activations/softmax)
+Because we want to know what digit it is, we use [softmax activation](https://www.tensorflow.org/api_docs/python/tf/keras/activations/softmax)
 in the last layer to give us a probability distribution of each class. In the case below, the model
 is certain that the image is a number "2".
 
@@ -83,9 +83,9 @@ prediction.
 What should we do in these cases?
 
 To solve those cases we usually pick a threshold for the decision. Instead of simply using the class
-with the maximum probability, we pick the largest probability above the threshold we are using. If
-we pick 50% as the threshold, in the number "2" example above we are still able to classify the image as
-the number "2".
+with the maximum probability, we pick the largest probability above the threshold we chose. If we
+choose 50% as the threshold, in the number "2" example above we are still able to classify the image
+as the number "2".
 
 &nbsp;&nbsp;&nbsp;&nbsp;![Model classification - above threshold](./pics/model-classification-threshold-above.png)
 
@@ -106,8 +106,8 @@ certain of the prediction. Any image below that threshold is sent to human revie
 
 ## Effect of different thresholds
 
-The higher the threshold for the decision is, the fewer images the model can classify. For this
-example, this is the effect of different thresholds on the model accuracy.
+The higher the threshold for the decision, the fewer images the model can classify. For the model
+used in these examples, this is the effect of different thresholds on the model's accuracy.
 
 | Threshold | Accuracy |
 | --------: | -------: |
