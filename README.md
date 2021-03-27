@@ -14,6 +14,15 @@ prediction (label) is for classification problems, the **decision threshold**. W
 without understanding how a model decides what "correct" is, talking about the model accuracy
 is premature.
 
+We use _accuracy_ in this text as the number of correct predictions on the test set, divided by the
+number of instances in the test set.
+
+```text
+             Number of correct predictions
+accuracy = ----------------------------------
+                  Number of instances
+```
+
 To illustrate the discussion, we will use an image classification model (the code is in this
 [Jupyter playbook](./softmax-thresholds.ipynb)).
 
@@ -93,7 +102,7 @@ be very confident in the model's prediction.
 For example, for an automatic check deposit application, we want the model to be at least 99%
 certain of the prediction. Any image below that threshold is sent to human review.
 
-&nbsp;&nbsp;&nbsp;&nbsp;![Model classification - below threshold](./pics/model-classification-high-stakes.png)
+&nbsp;&nbsp;&nbsp;&nbsp;![Model classification - high stakes](./pics/model-classification-high-stakes.png)
 
 ## Effect of different thresholds
 
