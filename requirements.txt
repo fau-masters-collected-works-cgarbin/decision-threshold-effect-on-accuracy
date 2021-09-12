@@ -1,9 +1,9 @@
 # This file uses specific versions to make the experiments reproducible
-jupyter==1.*
 jupyterlab==3.*
 
-numpy==1.*
-tensorflow==2.4.*
+tensorflow==2.6.*
+# TensorFlow install NumPy
+#numpy==
 tensorflow_datasets==4.*
 
 matplotlib==3.*
