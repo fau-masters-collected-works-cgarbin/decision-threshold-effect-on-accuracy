@@ -111,14 +111,14 @@ used in these examples, this is the effect of different thresholds on the model'
 
 | Threshold | Accuracy |
 | --------: | -------: |
-|    99.99% |    45.3% |
-|     99.9% |    72.4% |
-|       99% |    89.8% |
-|       90% |    96.6% |
-|       80% |    97.7% |
-|       75% |    97.9% |
-|       67% |    98.3% |
-|       50% |    98.7% |
+|    99.99% |    48.7% |
+|     99.9% |    75.6% |
+|       99% |    90.0% |
+|       90% |    96.4% |
+|       80% |    97.8% |
+|       75% |    97.8% |
+|       67% |    98.2% |
+|       50% |    98.8% |
 
 ## Asking questions about "accuracy"
 
@@ -141,5 +141,6 @@ If you want to try the example on your own:
 1. cd &lt;folder for the cloned repository&gt;
 1. Create a [Python environment](https://docs.python.org/3/tutorial/venv.html): `python3 -m venv env`
 1. Activate the environment: `source env/bin/activate` (Mac and Linux), or `env\Scripts\activate.bat` (Windows)
+1. Upgrade pip (or TensorFlow installation may fail): `pip install --upgrade pip`
 1. Install dependencies (only once): `pip install -r requirements.txt`
 1. Run the notebook: `jupyter lab`
