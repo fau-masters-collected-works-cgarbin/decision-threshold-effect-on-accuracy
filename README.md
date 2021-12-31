@@ -9,8 +9,8 @@ metrics compare correct and incorrect predictions of a model.
 
 But how exactly a model determines what a correct prediction is?
 
-Here we will analyze the effect of an important factor a model uses to decide what the correct
-prediction (label) is for classification problems, the **decision threshold**. We will see that
+Here we will analyze the effect of an important factor a model uses to decide the correct
+prediction (label) for classification problems, the **decision threshold**. We will see that
 without understanding how a model decides what "correct" is, talking about the model accuracy
 is premature.
 
@@ -35,7 +35,7 @@ the dataset has 70,000 images):
 
 &nbsp;&nbsp;&nbsp;&nbsp;![MNIST](./pics/mnist.png)
 
-In an image classification problem, we train a model to identify the class (label) of an image.
+In an image classification problem, we train a model to identify an image's class (label).
 In this case, there are ten classes, one for each digit (from zero to nine).
 
 &nbsp;&nbsp;&nbsp;&nbsp;![Digit classification model](./pics/digit-classification-model.png)
@@ -46,17 +46,17 @@ This is an actual digit from MNIST. The model correctly classifies it as the dig
 
 A neural network has several hidden layers to extract ("learn") features from the images. The very
 last layer is the one that classifies the image. In this case, we are classifying ten classes (ten
-digits), therefore the last layer has ten neurons, one for each digit.
+digits). Therefore the last layer has ten neurons, one for each digit.
 
 &nbsp;&nbsp;&nbsp;&nbsp;![Classification layer](./pics/classification-layer.png)
 
 Because we want to know what digit it is, we use [softmax activation](https://www.tensorflow.org/api_docs/python/tf/keras/activations/softmax)
-in the last layer to give us a probability distribution of each class. In the case below, the model
-is certain that the image is a number "2".
+in the last layer to give us a probability distribution of each class. The model
+is confident that the image is a number "2" in the case below.
 
 &nbsp;&nbsp;&nbsp;&nbsp;![Model classification certain](./pics/model-classification-certain.png)
 
-For other images, the model may not be so certain.
+For other images, the model may not be so confident.
 
 &nbsp;&nbsp;&nbsp;&nbsp;![Model classification not certain](./pics/model-classification-not-certain.png)
 
@@ -83,8 +83,8 @@ prediction.
 What should we do in these cases?
 
 To solve those cases we usually pick a threshold for the decision. Instead of simply using the class
-with the maximum probability, we pick the largest probability above the threshold we chose. If we
-choose 50% as the threshold, in the number "2" example above we are still able to classify the image
+with the maximum probability, we select the largest probability above the threshold we chose. If we
+choose 50% as the threshold, in the number "2" example above, we can still classify the image
 as the number "2".
 
 &nbsp;&nbsp;&nbsp;&nbsp;![Model classification - above threshold](./pics/model-classification-threshold-above.png)
@@ -96,11 +96,11 @@ a decision at all.
 
 But what threshold do we pick?
 
-It depends. For high-stakes applications, where wrong decisions have severe consequence, we want to
+It depends. For high-stakes applications, where wrong decisions have severe consequences, we want to
 be very confident in the model's prediction.
 
 For example, for an automatic check deposit application, we want the model to be at least 99%
-certain of the prediction. Any image below that threshold is sent to human review.
+confident of the prediction. Any image below that threshold is sent to human review.
 
 &nbsp;&nbsp;&nbsp;&nbsp;![Model classification - high stakes](./pics/model-classification-high-stakes.png)
 
