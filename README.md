@@ -133,6 +133,12 @@ was measured and not just accept published numbers_.
 _"We achieved 99.9% accuracy on [some task here]"_ means nothing if it's not accompanied by a
 detailed description of what a "correct prediction" is for the model.
 
+## ROC as a better alternative to accuracy
+
+A better alternative to _accuracy_ is the [receiver operating characteristic (ROC) curve](https://en.wikipedia.org/wiki/Receiver_operating_characteristic) (for a simpler introduction, see [this page](https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc)). The ROC curve shows, at a glance, how a model behaves with different thresholds.
+
+Every scientific paper that describes a model should publish the ROC curve. Papers that publish only the accuracy for the model, and especially papers that publish the accuracy without specifying the threshold, are, at best, incomplete. At worst, they were written by uninformed machine learning novices.
+
 ## Running the example
 
 If you want to try the example on your own:
