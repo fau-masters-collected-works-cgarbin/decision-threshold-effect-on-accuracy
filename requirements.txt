@@ -2,7 +2,7 @@
 jupyterlab==3.*
 
 tensorflow==2.6.*
-# TensorFlow install NumPy
+# TensorFlow installs NumPy
 #numpy==
 tensorflow_datasets==4.*
 
