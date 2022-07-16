@@ -139,6 +139,10 @@ A better alternative to _accuracy_ is the [receiver operating characteristic (RO
 
 Every scientific paper that describes a model should publish the ROC curve. Papers that publish only the accuracy for the model, and especially papers that publish the accuracy without specifying the threshold, are, at best, incomplete. At worst, they were written by uninformed machine learning novices.
 
+## Video
+
+A six-minute video version of this content is available [on YouTube](https://youtu.be/OI6DNLJxzTU).
+
 ## Running the example
 
 If you want to try the example on your own:
