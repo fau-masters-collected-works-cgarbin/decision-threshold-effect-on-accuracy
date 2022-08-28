@@ -106,8 +106,7 @@ confident of the prediction. Any image below that threshold is sent to human rev
 
 ## Effect of different thresholds
 
-The higher the threshold for the decision, the fewer images the model can classify. For the model
-used in these examples, this is the effect of different thresholds on the model's accuracy.
+The higher the threshold for the decision, the fewer images the model can classify. For the model used in these examples, this is the effect of different thresholds on the model's accuracy (the exact numbers may vary a bit from one run to another, but the relative differences will be about the same).
 
 | Threshold | Accuracy |
 | --------: | -------: |
