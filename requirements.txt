@@ -1,8 +1,8 @@
 # This file uses specific versions to make the experiments reproducible
-jupyterlab==3.*
+jupyterlab==4.*
 ipywidgets==8.*
 
-tensorflow==2.9.*
+tensorflow==2.13.*
 # TensorFlow installs NumPy
 #numpy==
 tensorflow_datasets==4.*

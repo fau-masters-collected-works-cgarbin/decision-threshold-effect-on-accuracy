@@ -20,14 +20,14 @@ number of instances in the test set.
 ```text
              Number of correct predictions
 accuracy = ---------------------------- ------
-                  Number of instances  
+                  Number of instances
 ```
 
 To illustrate the discussion, we will use an image classification model (the code is in this
 [Jupyter notebook](./softmax-thresholds.ipynb)).
 
 (_Simplification disclaimer: there are other types of problems, e.g. regression, and other types of
-models -- we are making simplifications to expose the main concept._)
+models -- we are simplifying to expose the main concept._)
 
 A typical image classification problem, taught early in machine learning, is digit classification with the
 [MNIST dataset](http://yann.lecun.com/exdb/mnist/). The dataset looks like this (a small sample -
